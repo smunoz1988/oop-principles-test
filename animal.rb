@@ -13,5 +13,4 @@ class Animal
     def speak
         "Grrrr"
     end
-
 end
