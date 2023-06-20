@@ -1,4 +1,5 @@
 require "./animal.rb"
+require "./food.rb"
 
 class Spider < Animal
     def initialize(web_strength_level, name = "Unknown")
