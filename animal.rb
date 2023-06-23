@@ -2,6 +2,8 @@ require "./remover.rb"
 require "./food.rb"
 
 class Animal
+    attr_accessor :owner
+
     def initialize(type, number_of_legs, name = "Unknown")
         @id = Random.rand(1..1000)
         @name = name
@@ -13,6 +15,11 @@ class Animal
     attr_reader :type, :number_of_legs, :id
 
     attr_accessor :name
+
+    def owner=(owner)
+        @owner = owner
+        owner.animals.push(self) unless owner.animals.include?(self)
+    end
 
     def speak
         "Grrrr"
