@@ -2,7 +2,7 @@ require "./remover.rb"
 require "./food.rb"
 
 class Animal
-    attr_accessor :owner, :visits
+    # bug attr_accessor :owner, :visits*/
 
     def initialize(type, number_of_legs, name = "Unknown")
         @id = Random.rand(1..1000)
